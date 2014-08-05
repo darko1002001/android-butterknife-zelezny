@@ -17,6 +17,7 @@ import javax.swing.*;
 public class Settings implements Configurable {
 
     public static final String PREFIX = "butterknifezelezny_prefix";
+    public static final String PREFIX_CHECKBOX = "butterknifezelezny_prefix_checkbox";
     public static final String VIEWHOLDER_CLASS_NAME = "butterknifezelezny_viewholder_class_name";
 
     private JPanel mPanel;

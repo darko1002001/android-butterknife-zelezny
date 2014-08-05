@@ -246,16 +246,16 @@ public class Utils {
 	 * @return
 	 */
 	public static String getPrefix() {
-        String prefix = PropertiesComponent.getInstance().getValue(Settings.PREFIX);
-        if (prefix == null || prefix.length() == 0) {
-            CodeStyleSettingsManager manager = CodeStyleSettingsManager.getInstance();
-            CodeStyleSettings settings = manager.getCurrentSettings();
-            prefix = settings.FIELD_NAME_PREFIX;
-        }
-		if (prefix == null || prefix.length() == 0) {
-			prefix = "m"; // field name
-		}
-		return prefix;
+    String prefix = PropertiesComponent.getInstance().getValue(Settings.PREFIX);
+      if (prefix == null || prefix.length() == 0) {
+          CodeStyleSettingsManager manager = CodeStyleSettingsManager.getInstance();
+          CodeStyleSettings settings = manager.getCurrentSettings();
+          prefix = settings.FIELD_NAME_PREFIX;
+      }
+      if (prefix == null || prefix.length() == 0) {
+        prefix = "";
+      }
+		  return prefix;
 	}
 
     public static String getViewHolderClassName() {

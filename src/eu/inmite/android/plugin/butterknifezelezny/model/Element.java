@@ -70,13 +70,15 @@ public class Element {
 	private String getFieldName() {
 		String[] words = this.id.split("_");
 		StringBuilder sb = new StringBuilder();
-		sb.append(Utils.getPrefix());
+    String prefix = Utils.getPrefix();
+    sb.append(prefix);
 
 		for (String word : words) {
 			String[] idTokens = word.split("\\.");
 			char[] chars = idTokens[idTokens.length - 1].toCharArray();
-			chars[0] = Character.toUpperCase(chars[0]);
-
+      if(sb.length() > 0) {
+        chars[0] = Character.toUpperCase(chars[0]);
+      }
 			sb.append(chars);
 		}
 
